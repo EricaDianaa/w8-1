@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .input {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      body {
+        background-color: aquamarine;
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        align-items: center;
+      }
+      #number {
+        height: 30px;
+        margin-left: 10px;
+      }
+      #number2 {
+        margin-left: 10px;
+      }
+      .container {
+        border: 2px solid blue;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Play</h1>
+      <div class="input">
+        <div>
+          <h3>Giocatore 1</h3>
+          <input type="number" placeholder="Inserisci un numero" id="number1" />
+        </div>
+        <div>
+          <h3>Giocatore 2</h3>
+          <input type="number" placeholder="Inserisci un numero" id="number2" />
+          <button id="invia">Invia</button>
+        </div>
+      </div>
+      <div class="button">
+        <h3>Scopri il numero</h3>
+        <button id="number">Number</button>
+        <div id="numberDiv"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
