@@ -18,8 +18,8 @@ var numberRandom;
 buttonNumber.addEventListener("click", function () {
     numberRandom = Math.floor(Math.random() * (100 - 1)) + 1;
     console.log(numberRandom);
-    var newP = (document.createElement("p").textContent = numberRandom);
-    newP === null || newP === void 0 ? void 0 : newP.appendChild(div);
+    // let newP: any = (document.createElement("p").textContent = numberRandom);
+    // newP?.appendChild(div);
     //IF/ELSE COMPARAZIONE NUMERI
     if (value1 === numberRandom) {
         alert("Il giocatore n°1 ha vinto");
