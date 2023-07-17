@@ -13,14 +13,13 @@ buttonInvia.addEventListener("click", function () {
     console.log(value1);
     console.log(value2);
 });
-//CICLO PER NUMERO CASUALE 
+//CICLO PER NUMERO CASUALE
 var numberRandom;
 buttonNumber.addEventListener("click", function () {
-    numberRandom = (Math.floor(Math.random() * (100 - 1)) + 1).toString();
+    numberRandom = Math.floor(Math.random() * (100 - 1)) + 1;
     console.log(numberRandom);
-    var newP = document.createElement("p").textContent = numberRandom;
+    var newP = (document.createElement("p").textContent = numberRandom);
     newP === null || newP === void 0 ? void 0 : newP.appendChild(div);
-    // console.log(newP)
     //IF/ELSE COMPARAZIONE NUMERI
     if (value1 === numberRandom) {
         alert("Il giocatore n°1 ha vinto");
@@ -28,13 +27,13 @@ buttonNumber.addEventListener("click", function () {
     else if (value2 === numberRandom) {
         alert("Il giocatore n°2 ha vinto");
     }
-    else if (value1 < numberRandom || value1 > numberRandom) {
-        alert("Il giocatore n°1 si è avvicinato");
-    }
-    else if (value2 == numberRandom) {
-        alert("Il giocatore n°2 si è avvicinato");
-    }
     else {
-        alert("Nessuno è riuscito a indovinare ");
+        if (Math.abs(value1 - numberRandom) > Math.abs(value2 - numberRandom)) {
+            alert(" Nessuno ha vinto ma il giocatore n°2 si è avvicinato");
+        }
+        else {
+            Math.abs(value2 - numberRandom) > Math.abs(value1 - numberRandom);
+            alert("  Nessuno ha vinto ma il giocatore n°1 si è avvicinato");
+        }
     }
 });
