@@ -23,7 +23,7 @@ let numberRandom
 buttonNumber.addEventListener("click", function(){ 
    numberRandom=(Math.floor(Math.random()*(100-1))+1).toString() 
   console.log(numberRandom)  
-    // let newP= document.createElement("p").innerText=numberRandom
+    // let newP:any= document.createElement("p").textContent=numberRandom
     // newP?.appendChild(div);
     // console.log(newP)
 
@@ -35,12 +35,12 @@ alert("Il giocatore n°1 ha vinto")
 else if(value2===numberRandom){
 alert("Il giocatore n°2 ha vinto")
 }
-else if(value1<numberRandom||value1>numberRandom){
-    alert("Il giocatore n°1 si è avvicinato")
-}
-else if(value2==numberRandom){
-     alert("Il giocatore n°2 si è avvicinato")
- }
+// else if(value1<numberRandom||value1>numberRandom){
+//     alert("Il giocatore n°1 si è avvicinato")
+// }
+// else if(value2==numberRandom){
+//      alert("Il giocatore n°2 si è avvicinato")
+//  }
 else{
     alert("Nessuno è riuscito a indovinare ")
 }
