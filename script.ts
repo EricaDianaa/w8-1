@@ -28,12 +28,17 @@ buttonNumber.addEventListener("click", function () {
     alert("Il giocatore n°1 ha vinto");
   } else if (value2 === numberRandom) {
     alert("Il giocatore n°2 ha vinto");
+  } else if (value1 === numberRandom && value2 === numberRandom) {
+    alert("Entrambi i giocatori hanno vinto");
   } else {
     if (Math.abs(value1 - numberRandom) > Math.abs(value2 - numberRandom)) {
       alert(" Nessuno ha vinto ma il giocatore n°2 si è avvicinato");
-    } else {
-      Math.abs(value2 - numberRandom) > Math.abs(value1 - numberRandom);
+    } else if (
+      Math.abs(value2 - numberRandom) > Math.abs(value1 - numberRandom)
+    ) {
       alert("  Nessuno ha vinto ma il giocatore n°1 si è avvicinato");
+    } else {
+      alert("nessuno ha vinto ma entrambi i giocatori si sono avvicinati");
     }
   }
 });
