@@ -20,8 +20,7 @@ let numberRandom: any | number;
 buttonNumber.addEventListener("click", function () {
   numberRandom = Math.floor(Math.random() * (100 - 1)) + 1;
   console.log(numberRandom);
-  // let newP: any = (document.createElement("p").textContent = numberRandom);
-  // newP?.appendChild(div);
+  alert("Il numero estratto è" + numberRandom);
 
   //IF/ELSE COMPARAZIONE NUMERI
   if (value1 === numberRandom) {
